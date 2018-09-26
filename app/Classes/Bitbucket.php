@@ -152,9 +152,10 @@ class Bitbucket implements ProviderInterface
 
         $data = $this->tplOrganization($response);
 
-        $organization = Organization::updateOrCreate(['provider_id' => $data['provider_id']], $data);
+        //$organization = Organization::updateOrCreate(['provider_id' => $data['provider_id']], $data);
 
-        $organization->users()->sync([Auth::id()]);
+        //$organization->users()->sync([Auth::id()]);
+        $organization = "";
 
         return $organization;
     }
